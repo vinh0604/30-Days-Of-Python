@@ -168,7 +168,7 @@ print(challenge.find('th')) # 0
 challenge = 'Thirty'
 print(challenge.isdigit()) # False
 challenge = '30'
-print(challenge.digit())   # True
+print(challenge.isdigit())   # True
 
 # isdecimal():Checks decimal characters
 
@@ -246,3 +246,63 @@ challenge = 'thirty days of python'
 print(challenge.startswith('thirty')) # True
 challenge = '30 days of python'
 print(challenge.startswith('thirty')) # False
+
+print(' '.join(['Thirty', 'Days', 'Of', 'Python']))
+print(' '.join(['Coding', 'For', 'All']))
+company = 'Coding For All'
+print(company)
+print(len(company))
+print(company.upper())
+print(company.lower())
+print(company.capitalize())
+print(company.title())
+print(company.swapcase())
+print(company[7:])
+print(company.count('Coding'))
+print(company.index('Coding'))
+print(company.rindex('Coding'))
+print(company.find('Coding'))
+print(company.rfind('Coding'))
+print(company.replace('Coding', 'Python'))
+print('Python for Everyone'.replace('Everyone', 'All'))
+print('Python for Everyone'[:11] + 'All')
+print(company.split(' '))
+print('Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'.split(','))
+print(company[0])
+print(len(company) - 1)
+print(company[10])
+abbr = ''
+for word in 'Python For Everyone'.split(' '):
+    abbr += word[0]
+print(abbr)
+abbr = ''
+for word in 'Coding For All'.split(' '):
+    abbr += word[0]
+print(abbr)
+print(company.index('C'))
+print(company.index('F'))
+print(company.rfind('I'))
+sentence = 'You cannot end a sentence with because because because is a conjunction'
+print(sentence.find('because'))
+print(sentence.rfind('because'))
+print(sentence[:sentence.find('because')] + sentence[sentence.rfind('because')+8:])
+print(company.startswith('Coding'))
+print(company.endswith('coding'))
+print('   Coding For All      '.strip())
+print('30DaysOfPython'.isidentifier())
+print('thirty_days_of_python'.isidentifier())
+'# '.join(['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon'])
+print('I am enjoying this challenge.\nI just wonder what is next.')
+print('Name\tAge\tCountry\tCity\nAsabeneh\t250\tFinland\tHelsinki'.expandtabs(10))
+
+radius = 10
+area = 3.14 * radius ** 2
+print('The area of a circle with radius {} is {} meters square.'.format(str(radius), str(int(area))))
+
+print(f'8 + 6 = {8 + 6}')
+print(f'8 - 6 = {8 - 6}')
+print(f'8 * 6 = {8 * 6}')
+print('8 / 6 = %.2f' % (8 / 6))
+print(f'8 % 6 = {8 % 6}')
+print(f'8 // 6 = {8 // 6}')
+print(f'8 ** 6 = {8 ** 6}')

@@ -38,3 +38,41 @@ print('Last name: ', last_name)
 print('Country: ', country)
 print('Age: ', age)
 print('Married: ', is_married)
+
+print(type(first_name))
+print(type(last_name))
+print(type(country))
+print(type(city))
+print(type(age))
+print(type(is_married))
+print(type(skills))
+print(type(person_info))
+print(len(first_name))
+print(len(first_name) > len(last_name))
+num_five = 5
+num_four = 4
+total = num_five + num_four
+print(total)
+diff = num_five - num_four
+print(diff)
+product = num_five * num_four
+print(product)
+division = num_five / num_four
+print(division)
+remainder = num_five % num_four
+print(remainder)
+exp = num_five ** num_four
+print(exp)
+floor_division = num_five // num_four
+print(floor_division)
+
+radius = 30
+area_of_circle = 3.14 * (radius ** 2)
+print(area_of_circle)
+circum_of_circle = 3.14 * radius * 2
+print(circum_of_circle)
+
+first_name = input("Please enter First Name: ")
+last_name = input("Please enter Last Name: ")
+country = input("Please enter Country: ")
+age = int(input("Please enter Age: "))
