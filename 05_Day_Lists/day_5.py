@@ -106,7 +106,10 @@ print(fruits)       # ['orange', 'mango', 'lemon']
 del fruits[1]     
 print(fruits)       # ['orange', 'lemon']
 del fruits
-print(fruits)       # This should give: NameError: name 'fruits' is not defined
+try: 
+  print(fruits)       # This should give: NameError: name 'fruits' is not defined
+except Exception as err:
+  print(err)
 
 # clear
 fruits = ['banana', 'orange', 'mango', 'lemon']
@@ -177,3 +180,276 @@ ages.sort()
 print(ages) 
 ages.sort(reverse=True)
 print(ages) 
+
+empty_list = []
+list = [1,2,3,4,5,6,7]
+print(len(list))
+print(list[0])
+print(list[len(list) - 1])
+print(list[len(list) // 2])
+mixed_data_types = ['Vinh', 33, 168, 'married', 'Singapore']
+it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+print(it_companies)
+print(len(it_companies))
+print(it_companies[0])
+print(it_companies[len(it_companies) - 1])
+print(it_companies[len(it_companies) // 2])
+it_companies[1] = 'Alphabet'
+print(it_companies)
+it_companies.append('Bytedance')
+print(it_companies)
+it_companies.insert(3, 'Netflix')
+print(it_companies)
+it_companies[0] = it_companies[0].upper()
+print(it_companies)
+print('#'.join(it_companies))
+print(it_companies.index('Microsoft'))
+it_companies.sort()
+print(it_companies)
+it_companies.reverse()
+print(it_companies)
+print(it_companies[:3])
+print(it_companies[-3:])
+middle = (len(it_companies) - 1) // 2 
+print(it_companies[middle:middle+1])
+del it_companies[0]
+print(it_companies)
+middle = (len(it_companies) - 1) // 2 
+del it_companies[middle]
+print(it_companies)
+it_companies.pop()
+print(it_companies)
+it_companies.clear()
+print(it_companies)
+del it_companies
+try: 
+  print(it_companies)       # This should give: NameError: name 'fruits' is not defined
+except Exception as err:
+  print(err)
+front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+back_end = ['Node','Express', 'MongoDB']
+print(front_end + back_end)
+full_stack = (front_end + back_end).copy()
+redux_idx = full_stack.index('Redux')
+full_stack.insert(redux_idx, 'SQL')
+full_stack.insert(redux_idx, 'Python')
+print(full_stack)
+
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+min_age = sorted(ages)[0]
+max_age = sorted(ages, reverse=True)[0]
+ages.append(min_age)
+ages.append(max_age)
+middle = len(ages) // 2
+if len(ages) % 2 == 0:
+  median_age = sorted(ages)[middle - 1:middle+1]
+else:
+  median_age = sorted(ages)[middle]
+print(median_age)
+avg_age = sum(ages) / len(ages)
+age_range = max_age - min_age
+print(abs(min_age - avg_age) >= abs(max_age - avg_age))
+countries = [
+  'Afghanistan',
+  'Albania',
+  'Algeria',
+  'Andorra',
+  'Angola',
+  'Antigua and Barbuda',
+  'Argentina',
+  'Armenia',
+  'Australia',
+  'Austria',
+  'Azerbaijan',
+  'Bahamas',
+  'Bahrain',
+  'Bangladesh',
+  'Barbados',
+  'Belarus',
+  'Belgium',
+  'Belize',
+  'Benin',
+  'Bhutan',
+  'Bolivia',
+  'Bosnia and Herzegovina',
+  'Botswana',
+  'Brazil',
+  'Brunei',
+  'Bulgaria',
+  'Burkina Faso',
+  'Burundi',
+  'Cambodia',
+  'Cameroon',
+  'Canada',
+  'Cape Verde',
+  'Central African Republic',
+  'Chad',
+  'Chile',
+  'China',
+  'Colombi',
+  'Comoros',
+  'Congo (Brazzaville)',
+  'Congo',
+  'Costa Rica',
+  "Cote d'Ivoire",
+  'Croatia',
+  'Cuba',
+  'Cyprus',
+  'Czech Republic',
+  'Denmark',
+  'Djibouti',
+  'Dominica',
+  'Dominican Republic',
+  'East Timor (Timor Timur)',
+  'Ecuador',
+  'Egypt',
+  'El Salvador',
+  'Equatorial Guinea',
+  'Eritrea',
+  'Estonia',
+  'Ethiopia',
+  'Fiji',
+  'Finland',
+  'France',
+  'Gabon',
+  'Gambia, The',
+  'Georgia',
+  'Germany',
+  'Ghana',
+  'Greece',
+  'Grenada',
+  'Guatemala',
+  'Guinea',
+  'Guinea-Bissau',
+  'Guyana',
+  'Haiti',
+  'Honduras',
+  'Hungary',
+  'Iceland',
+  'India',
+  'Indonesia',
+  'Iran',
+  'Iraq',
+  'Ireland',
+  'Israel',
+  'Italy',
+  'Jamaica',
+  'Japan',
+  'Jordan',
+  'Kazakhstan',
+  'Kenya',
+  'Kiribati',
+  'Korea, North',
+  'Korea, South',
+  'Kuwait',
+  'Kyrgyzstan',
+  'Laos',
+  'Latvia',
+  'Lebanon',
+  'Lesotho',
+  'Liberia',
+  'Libya',
+  'Liechtenstein',
+  'Lithuania',
+  'Luxembourg',
+  'Macedonia',
+  'Madagascar',
+  'Malawi',
+  'Malaysia',
+  'Maldives',
+  'Mali',
+  'Malta',
+  'Marshall Islands',
+  'Mauritania',
+  'Mauritius',
+  'Mexico',
+  'Micronesia',
+  'Moldova',
+  'Monaco',
+  'Mongolia',
+  'Morocco',
+  'Mozambique',
+  'Myanmar',
+  'Namibia',
+  'Nauru',
+  'Nepal',
+  'Netherlands',
+  'New Zealand',
+  'Nicaragua',
+  'Niger',
+  'Nigeria',
+  'Norway',
+  'Oman',
+  'Pakistan',
+  'Palau',
+  'Panama',
+  'Papua New Guinea',
+  'Paraguay',
+  'Peru',
+  'Philippines',
+  'Poland',
+  'Portugal',
+  'Qatar',
+  'Romania',
+  'Russia',
+  'Rwanda',
+  'Saint Kitts and Nevis',
+  'Saint Lucia',
+  'Saint Vincent',
+  'Samoa',
+  'San Marino',
+  'Sao Tome and Principe',
+  'Saudi Arabia',
+  'Senegal',
+  'Serbia and Montenegro',
+  'Seychelles',
+  'Sierra Leone',
+  'Singapore',
+  'Slovakia',
+  'Slovenia',
+  'Solomon Islands',
+  'Somalia',
+  'South Africa',
+  'Spain',
+  'Sri Lanka',
+  'Sudan',
+  'Suriname',
+  'Swaziland',
+  'Sweden',
+  'Switzerland',
+  'Syria',
+  'Taiwan',
+  'Tajikistan',
+  'Tanzania',
+  'Thailand',
+  'Togo',
+  'Tonga',
+  'Trinidad and Tobago',
+  'Tunisia',
+  'Turkey',
+  'Turkmenistan',
+  'Tuvalu',
+  'Uganda',
+  'Ukraine',
+  'United Arab Emirates',
+  'United Kingdom',
+  'United States',
+  'Uruguay',
+  'Uzbekistan',
+  'Vanuatu',
+  'Vatican City',
+  'Venezuela',
+  'Vietnam',
+  'Yemen',
+  'Zambia',
+  'Zimbabwe',
+]
+middle_country_idx = len(countries) // 2
+if len(countries) % 2 == 0:
+  print(countries[:middle_country_idx])
+  print(countries[middle_country_idx:])
+else:
+  print(countries[:middle_country_idx + 1])
+  print(countries[middle_country_idx + 1:])
+cna, us, rus, *rest = ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+print(f'{cna}, {us}, {rus}, {rest}')
